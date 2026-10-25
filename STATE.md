@@ -13,8 +13,8 @@ Last updated: 2026-10-25 (day 0)
 | V-JEPA 2 ViT-L | vitl.pt (5.1 GB) | done; encoder+predictor+target_encoder verified |
 | V-JEPA 2 ViT-g | vitg.pt (16.5 GB) | done; encoder+predictor+target_encoder verified |
 | V-JEPA 2-AC ViT-g | vjepa2-ac-vitg.pt | present (downloaded Jul 2026) |
-| V-JEPA 2.1 ViT-L (distilled) | vjepa2_1_vitl_dist_vitG_384.pt | done; predictor present (target = ema_encoder) |
-| V-JEPA 2.1 ViT-g | vjepa2_1_vitg_384.pt | downloading; predictor inside not yet verified |
+| V-JEPA 2.1 ViT-L (distilled) | vjepa2_1_vitl_dist_vitG_384.pt | done; predictor present (target = ema_encoder); unused fallback |
+| V-JEPA 2.1 ViT-g | vjepa2_1_vitg_384.pt | done; predictor + target_encoder verified. This is model 3 |
 | DINO-WM | none | dropped (2026-10-25, user decision): public checkpoints are PointMaze/PushT/Wall only. Third model = V-JEPA 2.1 |
 | LTX-Video 2B (diffusers) | weights/LTX-Video | downloading; non-JEPA family + YoCausal baseline |
 | RAFT (flow control) | torchvision raft_large | via torchvision |

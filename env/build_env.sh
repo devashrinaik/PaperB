@@ -20,4 +20,4 @@ echo BUILD_ENV_DONE
 echo $ROOT/third_party/vjepa2 > $(python -c "import site;print(site.getsitepackages()[0])")/vjepa2_repo.pth
 # LTX-Video (diffusers) for the YoCausal-style denoising-loss baseline
 pip install diffusers==0.42.0 transformers accelerate sentencepiece safetensors huggingface_hub
-hf download Lightricks/LTX-Video --include "model_index.json" "transformer/*" "vae/*" "scheduler/*" "text_encoder/*" "tokenizer/*" --local-dir $ROOT/weights/LTX-Video
+bash $ROOT/env/download_ltx.sh

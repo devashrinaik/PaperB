@@ -5,7 +5,7 @@ Fixed 2026-10-25, before any feature extraction or measurement.
 ## Models (frozen, fp16 on RTX 2080 Ti)
 1. V-JEPA 2 ViT-L (`vitl.pt`): target encoder + mask predictor
 2. V-JEPA 2 ViT-g (`vitg.pt`): target encoder + mask predictor
-3. V-JEPA 2.1 (`vjepa2_1_vitg_384.pt` if it ships a predictor; else `vjepa2_1_vitl_dist_vitG_384.pt`, verified to include a predictor). Its target encoder is the checkpoint's `ema_encoder`.
+3. V-JEPA 2.1 ViT-g (`vjepa2_1_vitg_384.pt`): target encoder + predictor, verified present. Fallback `vjepa2_1_vitl_dist_vitG_384.pt` (target = `ema_encoder`) is not needed.
 
 DINO-WM is not used: its public checkpoints cover only PointMaze, PushT and Wall, with none for real video. We report this as a limitation. All three models are from the V-JEPA family, so agreement across them counts as weaker evidence than agreement across independent model families. V-JEPA 2-AC is used only on RoboLab clips that come with actions, and it is not part of either kill test.
 
