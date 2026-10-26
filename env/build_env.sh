@@ -19,5 +19,5 @@ echo BUILD_ENV_DONE
 # vjepa2 editable install does not expose top-level `src`; add the repo to sys.path
 echo $ROOT/third_party/vjepa2 > $(python -c "import site;print(site.getsitepackages()[0])")/vjepa2_repo.pth
 # LTX-Video (diffusers) for the YoCausal-style denoising-loss baseline
-pip install diffusers==0.42.0 transformers accelerate sentencepiece safetensors huggingface_hub
+pip install diffusers==0.34.0 transformers==4.53.2 peft==0.15.2 accelerate==1.8.1 huggingface_hub==0.33.4 sentencepiece safetensors  # newer releases need torch>=2.6; env pinned to 2.5.1
 bash $ROOT/env/download_ltx.sh
